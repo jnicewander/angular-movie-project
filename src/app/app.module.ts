@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { SearchCriteriaComponent } from './search-criteria/search-criteria.component';
 import { MovieListComponent } from './movie-list/movie-list.component';
 import { WatchlistPageComponent } from './watchlist-page/watchlist-page.component';
+import { FilterPipe } from './filter.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     SearchCriteriaComponent,
     MovieListComponent,
-    WatchlistPageComponent
+    WatchlistPageComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,
