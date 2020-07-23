@@ -1,1 +1,6 @@
-<p>movie-list works!</p>
+<h1>List of Movies</h1>
+<div *ngFor='let movie of movies'>
+    <p>Title: {{ movie.title }}</p>
+    <p>ID: {{ movie.id }}</p>
+    <p>Average User Score: {{ movie.vote_average }}</p>
+</div>
