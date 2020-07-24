@@ -1,0 +1,35 @@
+.mov
+{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+
+    width: 768px;
+
+    margin: 25px 0px;
+
+    background: orange;
+}
+
+.title
+{
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0;
+
+    background: khaki;
+}
+
+.id
+{
+    margin: 0;
+
+    background: lightgreen;
+}
+
+.rate
+{
+    margin: 0;
+
+    background: lightblue;
+}

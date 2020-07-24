@@ -1,6 +1,7 @@
 <h1>List of Movies</h1>
-<div *ngFor='let movie of movies'>
-    <p>Title: {{ movie.title }}</p>
-    <p>ID: {{ movie.id }}</p>
-    <p>Average User Score: {{ movie.vote_average }}</p>
+<div *ngFor='let movie of movies' class="mov">
+    <img src="https://image.tmdb.org?t/p/w500/{{ movie.poster_path }}">
+    <p class="title">{{ movie.title }}</p>
+    <p class="id">ID: {{ movie.id }}</p>
+    <p class="rate">Average User Score: {{ movie.vote_average }}</p>
 </div>
