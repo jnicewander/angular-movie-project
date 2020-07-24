@@ -14,7 +14,7 @@ export class MovieListComponent implements OnInit {
   movies: MovieDetailsObject[];
 
   ngOnInit(): void {
-    this.apiService.getMovies().subscribe((response: ApiResponse) => {
+    this.apiService.getMovies("2018").subscribe((response: ApiResponse) => {
       this.movies = response.results
     })
   }

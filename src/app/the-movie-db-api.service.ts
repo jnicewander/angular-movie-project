@@ -6,13 +6,23 @@ import { HttpClient } from '@angular/common/http'
 })
 
 export class TheMovieDbApiService {
+  baseURL: string = 'https://api.themoviedb.org/3/discover/movie?api_key=a54ab344ecaa235e031650493214996a'
 
   constructor(private http: HttpClient) { }
-  API_KEY: string = 'a54ab344ecaa235e031650493214996a';
+  url: string;
 
-  //  https://api.themoviedb.org/3/search/movie?api_key=a54ab344ecaa235e031650493214996a&language=en-US&query=matrix&page=1&include_adult=false
-  getMovies(){
-    return this.http.get('https://api.themoviedb.org/3/search/movie?api_key=a54ab344ecaa235e031650493214996a&language=en-US&query=matrix&page=1&include_adult=false');
+  getMovies(year?: string, rating?: number, genre?: string) {
+    if(year) {
+      this.url = `${this.baseURL}&year=${year}`;
+    }
+    // if(rating) {
+    //   this.url = `${this.baseURL}&vote_count.gte=${rating}`;
+    // }
+    // if(genre) {
+    //   this.url = `${this.baseURL}&with_genres=${genre}`;
+    // }
+
+    return this.http.get(this.url);
   } 
   
 }
