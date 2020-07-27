@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { TheMovieDbApiService } from '../the-movie-db-api.service';
+import { NgForm } from '@angular/forms';
+
 
 @Component({
   selector: 'app-search-criteria',
@@ -7,9 +10,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SearchCriteriaComponent implements OnInit {
 
-  constructor() { }
+  constructor(private apiService: TheMovieDbApiService) {  }
 
-  ngOnInit(): void {
+  onSubmit(form: NgForm) {
+    this.apiService.getMovies(form.value.year);
   }
 
+  ngOnInit(): void {}
 }
