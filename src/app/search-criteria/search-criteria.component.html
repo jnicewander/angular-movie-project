@@ -1,1 +1,4 @@
-<p>search-criteria works!</p>
+<form #formID="ngForm" (ngSubmit)="onSubmit(formID)">
+    <input name="year" type="number" ngModel>
+    <button type="submit">Show Year</button>
+</form>
