@@ -1,4 +1,4 @@
-<app-search-criteria></app-search-criteria>
+<app-search-criteria (searchCriteriaData)="filterMovies($event)"></app-search-criteria>
 <h1>List of Movies</h1>
 <div *ngFor='let movie of movies'>
     <h2>Title: {{ movie.title }}</h2>

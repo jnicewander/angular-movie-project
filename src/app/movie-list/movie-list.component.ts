@@ -18,5 +18,9 @@ export class MovieListComponent implements OnInit {
       this.movies = response.results
     })
   }
-
+  filterMovies(event){
+    this.apiService.getMovies(event).subscribe((response: ApiResponse) => {
+      this.movies = response.results
+    })
+  }
 }
