@@ -14,6 +14,7 @@ export class SearchCriteriaComponent implements OnInit {
 
   onSubmit(form: NgForm) {
     this.apiService.getMovies(form.value.year);
+    console.log(form.value.year);
   }
 
   ngOnInit(): void {}
