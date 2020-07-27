@@ -1,7 +1,9 @@
 <h1>List of Movies</h1>
 <div *ngFor='let movie of movies'>
+    <img src="https://image.tmdb.org/t/p/w500/{{ movie.poster_path }}">
     <p>Title: {{ movie.title }}</p>
     <!-- <p>ID: {{ movie.id }}</p> -->
     <p>Average Score: {{ movie.vote_average }}</p>
     <p>Year: {{ movie.release_date }}</p>
+
 </div>
