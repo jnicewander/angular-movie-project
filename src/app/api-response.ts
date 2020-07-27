@@ -21,3 +21,9 @@ export interface MovieDetailsObject {
     overview: string;
     release_date: string;
 }
+
+export interface SearchCriteriaInterface {
+    year: number;
+    
+
+}
