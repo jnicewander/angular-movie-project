@@ -12,6 +12,7 @@ export class MovieListComponent implements OnInit {
   constructor(private apiService: TheMovieDbApiService) { }
 
   movies: MovieDetailsObject[];
+  showDetails: boolean = false;
 
   ngOnInit(): void {
     this.apiService.getMovies().subscribe((response: ApiResponse) => {
@@ -23,4 +24,5 @@ export class MovieListComponent implements OnInit {
       this.movies = response.results
     })
   }
+
 }
