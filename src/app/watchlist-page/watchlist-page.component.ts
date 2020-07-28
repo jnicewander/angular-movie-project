@@ -1,19 +1,12 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { ApiResponse, MovieDetailsObject } from '../api-response';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-watchlist-page',
   templateUrl: './watchlist-page.component.html',
   styleUrls: ['./watchlist-page.component.css']
 })
-export class WatchlistPageComponent implements OnInit {
+export class WatchlistPageComponent {
 
   constructor() { }
-
-  @Input() favoriteMovies: MovieDetailsObject;
-  
-  ngOnInit(): void {
-      
-  }
 
 }
