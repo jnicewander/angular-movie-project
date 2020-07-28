@@ -4,7 +4,7 @@
     <h2>Title: {{ movie.title }}</h2>
     <img src='https://image.tmdb.org/t/p/w342{{ movie.poster_path }}'>
     <button (click)="showDetails = !showDetails">More info</button>
- h  <button>Add to my list</button>
+    <button>Add to my list</button>
     <div *ngIf="showDetails">
       <p>Release Date: {{ movie.release_date }}</p>
       <p>Average User Score: {{ movie.vote_average }}</p>
