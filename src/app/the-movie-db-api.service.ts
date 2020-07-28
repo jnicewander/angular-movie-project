@@ -17,9 +17,12 @@ export class TheMovieDbApiService {
     let url: string = `${this.baseURL}`
     if(searchcritera && searchcritera.year) {
       url = `${url}${this.initialParameters}&primary_release_year=${searchcritera.year}`;
-    } else {
-      url = `${url}${this.initialParameters}`;
-    }
+    } 
+    if(searchcritera && searchcritera.genre) {
+      url = `${url}${this.initialParameters}&with_genres=${searchcritera.genre}`; 
+   
+    
+    // url = `${url}${this.initialParameters}`;
 
     return this.http.get(url);
   } 

@@ -18,11 +18,16 @@ export class SearchCriteriaComponent implements OnInit {
 
   onSubmit(form: NgForm) {
     let searchcriteria = {
-      year: form.value.year
-      
+      year: form.value.year,
+      genre: form.value.genre,
+      rating: form.value.rating
+
+
     }
     this.searchCriteriaData.emit(searchcriteria)
     console.log(form.value.year);
+    console.log(form.value.genre);
+    console.log(form.value.rating);
   }
 
   ngOnInit(): void {}

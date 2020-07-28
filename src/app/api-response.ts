@@ -24,6 +24,6 @@ export interface MovieDetailsObject {
 
 export interface SearchCriteriaInterface {
     year: number;
-    
-
+    genre: number;
+    rating: number;
 }

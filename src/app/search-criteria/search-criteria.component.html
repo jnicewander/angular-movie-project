@@ -1,4 +1,16 @@
 <form #formID="ngForm" (ngSubmit)="onSubmit(formID)">
+    <label for="year">Year</label>
     <input name="year" type="number" ngModel>
-    <button type="submit">Show Year</button>
+    <label for="genre">Genre:</label>
+    <select name="genre" ngModel>
+        <option value=28>Action</option>
+        <option value=12>Adventure</option>
+        <option value=16>Animation</option>
+        <option value=35>Comedy</option>
+        <option value=.878>Sci-Fi</option>
+        <option value=27>Horror</option>
+        <option value=10749>Romance</option>
+    </select>
+    <input name="rating" type="range" min="0" max="10" steps="0.5" ngModel>
+    <button type="submit">Search</button>
 </form>
