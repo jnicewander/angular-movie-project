@@ -67,3 +67,13 @@ button {
     border: none;
     font-size: large;
 }
+
+.search-button {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+}
+
+.search-button:hover {
+    color: darkgrey
+}
