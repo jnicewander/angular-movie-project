@@ -1,0 +1,141 @@
+.container {
+    display: flex;
+}
+
+.logo {
+    display: flex;
+    flex-flow: row nowrap;
+    height: 50px;
+    margin-top: 20px;
+}
+
+.logo-text-size {
+    font-size: 30px;
+    font-weight: 900;
+    margin: 0;
+}
+
+.material-icons.red50
+{
+    font-size: 40px;
+
+}
+
+
+div
+{
+    width: 100%;
+    
+}
+
+form
+{
+    display: flex;
+    flex-flow: column nowrap;
+
+    min-width: 1103px;
+    width: 100%;
+    padding: 0 50px;
+
+    border-bottom: 2px transparent solid;
+    box-sizing: border-box;
+
+    background-color: #9b2fae;
+
+    box-shadow: 10px 10px 40px 1px rgba(0,0,0,0.75);
+
+    color: white;
+}
+
+button
+{
+    margin: 25px 0;
+}
+
+label
+{
+    margin-top: 15px;
+    font-size: 20px;
+}
+
+input {
+    border-bottom: 2px white solid;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    padding: 10px ;
+    background-color: transparent;
+}
+
+input, select {
+    border-bottom: 2px white solid;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    padding: 10px ;
+    background-color: transparent;
+}
+
+*{
+    outline: none;
+}
+
+
+button {
+    background-color: transparent;
+    border: none;
+    font-size: 25px;
+    color: #9b2fae;
+}
+
+.search-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    align-self: center;
+    background: white;
+    border-radius: 10px;
+    margin: 20px 0;
+    height: 50px;
+    color: #9b2fae; 
+}
+
+.search-button:hover {
+    background: darkgrey
+}
+
+.material-icons.purple600 {
+    color: #9b2fae;
+}
+
+a {
+    text-decoration: none;
+    color: #9b2fae;
+}
+
+.red
+{
+    display: flex;
+    flex-direction: row;
+    width: 100px;
+}
+
+.watchlist-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    align-self: center;
+    background: white;
+    border-radius: 10px;
+    margin: 20px 0;
+    height: 50px;
+    color: #9b2fae;
+    font-size: 25px;
+}
+
+.watchlist-button:hover
+{
+    background: lightgrey;
+}

@@ -2,6 +2,8 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { TheMovieDbApiService } from '../the-movie-db-api.service';
 import { NgForm } from '@angular/forms';
 import { SearchCriteriaInterface } from '../api-response';
+import {MatButtonModule} from '@angular/material/button';
+
 
 
 
