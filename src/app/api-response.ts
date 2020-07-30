@@ -20,6 +20,7 @@ export interface MovieDetailsObject {
     vote_average: number;
     overview: string;
     release_date: string;
+    show_details?: boolean;
 }
 
 export interface SearchCriteriaInterface {

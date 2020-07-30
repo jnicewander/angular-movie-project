@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { TheMovieDbApiService } from '../the-movie-db-api.service';
 import { ApiResponse, MovieDetailsObject } from '../api-response';
+import { WatchlistService } from '../watchlist.service'
 
 @Component({
   selector: 'app-movie-list',
@@ -9,7 +10,7 @@ import { ApiResponse, MovieDetailsObject } from '../api-response';
 })
 export class MovieListComponent implements OnInit {
 
-  constructor(private apiService: TheMovieDbApiService) { }
+  constructor(private apiService: TheMovieDbApiService, private watchlistService: WatchlistService) { }
 
   movies: MovieDetailsObject[];
   showDetails: boolean = false;
@@ -24,5 +25,7 @@ export class MovieListComponent implements OnInit {
       this.movies = response.results
     })
   }
-
+  addMovie(movie){
+    this.watchlistService.addMovie(movie)
+  }
 }

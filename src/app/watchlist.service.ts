@@ -1,19 +1,20 @@
 import { Injectable } from '@angular/core';
+import { MovieDetailsObject } from './api-response'
 
 @Injectable({
   providedIn: 'root'
 })
 export class WatchlistService {
-    private movie: object;
-    //public favoritesArray: array;
+watchlistMovies: MovieDetailsObject[]=[];
 
-    getMovie(){
-        return this.movie;
-    }
+addMovie(movie:MovieDetailsObject){
+  this.watchlistMovies.push(movie)
+  console.log(this.watchlistMovies)
+}
 
-    addMovies(){
-
-    }
-
+removeMovie(movie:MovieDetailsObject){
+  let index = this.watchlistMovies.findIndex(item=>item.id===movie.id)
+  this.watchlistMovies.splice(index,1)
+}
 
 }
