@@ -2,12 +2,4 @@ body
 {
     margin: 0;
     padding: 0;
-
-    background: lightcoral;
-}
-
-@media only screen and (min-width: 768px){
-    body{
-        background: lightpink;
-    }
 }

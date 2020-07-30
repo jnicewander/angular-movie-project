@@ -1,0 +1,12 @@
+form
+{
+    display: flex;
+    flex-flow: column nowrap;
+
+    width: 400px;
+    padding: 0 100px;
+
+    border-bottom: 2px black solid;
+
+    background: lightgreen;
+}
