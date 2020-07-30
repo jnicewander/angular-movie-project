@@ -1,8 +1,8 @@
 <div class="container">
     <form #formID="ngForm" (ngSubmit)="onSubmit(formID)">
     <div class="logo">
-    <i class="material-icons">theaters</i>
-    <p class="logo-text-size">cinema.ly</p>
+        <i class="material-icons red50">theaters</i>
+        <p class="logo-text-size">cinema.ly</p>
     </div>
     <label for="year">Year</label>
     <input name="year" type="number" ngModel>
@@ -18,9 +18,20 @@
     </select>
     <label for="rating">Rating</label>
     <input name="rating" type="number" min="0" max="10" step="0.5" ngModel>
-    <div class="search-button">
-        <i class="material-icons md-48">search</i>
-        <button type="submit">Search</button>
-    </div>
+    <button type="submit" class="search-button">
+        <div style="color:#9b2fae;">
+            <i class="material-icons purple600">search</i>
+            Search
+        </div>
+    </button>
+
+    <a routerLink="watchlist" class="watchlist-button">
+        <div class="red">
+            <i class="material-icons purple600">watch_later</i>
+            Watchlist
+        </div>
+    </a>
 </form>
+
+
 </div>

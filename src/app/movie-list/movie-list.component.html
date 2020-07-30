@@ -1,20 +1,20 @@
 <app-search-criteria (searchCriteriaData)="filterMovies($event)"></app-search-criteria>
 <div>
-  <h1>List of Movies</h1>
-  <div class="watchlist-button"><i class="material-icons">watch_later</i>
-    <a routerLink="watchlist">Watchlist</a>
-    </div>
+  <h2>Search Results</h2>
 </div>
 <div *ngFor='let movie of movies' class="mov"> 
     <h1>{{ movie.title }}</h1>
     <img src='https://image.tmdb.org/t/p/w342{{ movie.poster_path }}'>
     <div class="buttons">
-        <button (click)="movie.show_details = !movie.show_details">More info</button>
-        <button (click)="addMovie(movie)">Add to my list</button>
+        <button (click)="movie.show_details = !movie.show_details"><i class="material-icons">info</i>&nbsp;&nbsp;More info</button>
+        
+        <div *ngIf="movie.show_details" class="more">
+            <p>Release Date: {{ movie.release_date }}</p>
+            <p>Average Rating: {{ movie.vote_average }}</p>
+            <p>{{ movie.overview }}</p>
+          </div>
+
+        <button (click)="addMovie(movie)"><i class="material-icons">add_to_queue</i>&nbsp;&nbsp;Add to my list</button>
     </div>
-    <div *ngIf="movie.show_details" class="more">
-      <p>Release Date: {{ movie.release_date }}</p>
-      <p>Average Rating: {{ movie.vote_average }}</p>
-      <p>{{ movie.overview }}</p>
-    </div>
+    
 </div>
