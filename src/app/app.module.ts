@@ -8,7 +8,8 @@ import { SearchCriteriaComponent } from './search-criteria/search-criteria.compo
 import { MovieListComponent } from './movie-list/movie-list.component';
 import { WatchlistPageComponent } from './watchlist-page/watchlist-page.component';
 import { FilterPipe } from './filter.pipe';
-import { TheMovieDbApiService } from './the-movie-db-api.service'
+import { TheMovieDbApiService } from './the-movie-db-api.service';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations'
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { TheMovieDbApiService } from './the-movie-db-api.service'
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    NoopAnimationsModule
   ],
   providers: [TheMovieDbApiService],
   bootstrap: [AppComponent]
