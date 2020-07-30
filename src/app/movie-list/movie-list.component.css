@@ -1,29 +1,57 @@
+div
+{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
 .mov
 {
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
-    width: 768px;
-    margin: 25px 0px;
-    background: orange;
+
+    width: 450px;
+    padding: 0 50px;
+    margin-top: 75px;
+    border-bottom: 2px black solid;
 }
 
-.title
+h1
 {
-    font-size: 20px;
     font-weight: bold;
-    margin: 0;
-    background: khaki;
+    margin-bottom: 30px;
+
+    text-align: center;
 }
 
-.id
+.butts
 {
-    margin: 0;
-    background: lightgreen;
+    width: 100%;
+
+    flex-flow: row nowrap;
+    justify-content: space-around;
+
+    margin: 20px 0;
 }
 
-.rate
+button
 {
-    margin: 0;
-    background: lightblue;
+    font-size: 16px;
+}
+
+.more
+{
+    border-top: 1px black solid;
+    padding-top: 15px;
+    margin-bottom: 15px;
+}
+
+p
+{
+    margin: 5px 24px;
+    font-size: 20px;
+
+    text-align: center;
 }

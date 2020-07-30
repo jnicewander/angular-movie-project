@@ -3,13 +3,8 @@ body
     margin: 0;
     padding: 0;
 
-    background: lightcoral;
-}
-
-@media only screen and (min-width: 768px){
-    body{
-        background: lightpink;
-    }
+    display: flex;
+    justify-content: center;
 }
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
