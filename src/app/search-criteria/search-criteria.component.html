@@ -1,7 +1,9 @@
-<div>
+<div class="container">
     <form #formID="ngForm" (ngSubmit)="onSubmit(formID)">
+    <div class="logo">
     <i class="material-icons">theaters</i>
-    <p>cinema.ly</p>
+    <p class="logo-text-size">cinema.ly</p>
+    </div>
     <label for="year">Year</label>
     <input name="year" type="number" ngModel>
     <label for="genre">Genre:</label>
@@ -16,6 +18,7 @@
     </select>
     <label for="rating">Rating</label>
     <input name="rating" type="number" min="0" max="10" step="0.5" ngModel>
-    <button type="submit">Search</button>
+    <div><button type="submit">Search</button>
+    </div>
 </form>
 </div>

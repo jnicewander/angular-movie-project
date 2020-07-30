@@ -1,6 +1,26 @@
+* {
+    color: white;
+}
+
+.container {
+    display: flex;
+}
+
+.logo {
+    display: flex;
+    flex-direction: row;
+}
+
+.logo-text-size {
+    font-size: 20px;
+    font-weight: 900;
+}
+
+
 div
 {
     width: 100%;
+    
 }
 
 form
@@ -11,13 +31,39 @@ form
     width: 100%;
     padding: 0 50px;
 
-    border-bottom: 2px black solid;
+    border-bottom: 2px transparent solid;
     box-sizing: border-box;
 
     background-color: #9b2fae;
+
+    box-shadow: 10px 10px 40px 1px rgba(0,0,0,0.75);
 }
 
 button
 {
     margin: 25px 0;
+}
+
+input {
+    border-bottom: 2px white solid;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    padding: 10px ;
+    background-color: transparent;
+}
+
+input, select {
+    border-bottom: 2px white solid;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    padding: 10px ;
+    background-color: transparent;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    font-size: large;
 }
