@@ -2,7 +2,7 @@
 <h1>List of Movies</h1>
 <a routerLink="watchlist">Watchlist</a>
 <div *ngFor='let movie of movies'>
-    <h2>Title: {{ movie.title }}</h2>
+    <h2>{{ movie.title }}</h2>
     <img src='https://image.tmdb.org/t/p/w342{{ movie.poster_path }}'>
     <button (click)="movie.show_details = !movie.show_details">More info</button>
     <button (click)="addMovie(movie)">Add to my list</button>
