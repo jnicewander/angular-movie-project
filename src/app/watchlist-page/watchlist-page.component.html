@@ -1,5 +1,17 @@
-<div *ngFor="let movie of watchlist">
-    <p>{{ movie.title }}</p>
+<div *ngFor="let movie of watchlist" class="mov">
+    <h1>{{ movie.title }}</h1>
+    <img src='https://image.tmdb.org/t/p/w342{{ movie.poster_path }}'>
+    <div class="butts">
+        <button (click)="movie.show_details = !movie.show_details">More info</button>
+        <button (click)="addMovie(movie)">Add to my list</button>
+    </div>
+    <div *ngIf="movie.show_details" class="more">
+      <p>Release Date: {{ movie.release_date }}</p>
+      <p>Average User Score: {{ movie.vote_average }}</p>
+      <p>Genre: {{ movie.genre_ids }}</p>
+      <p>Vote count: {{ movie.vote_count }}</p>
+      <p>{{ movie.overview }}</p>
+    </div>
 </div>
 
 <p> Movies kshnd;kjfajsdf </p>

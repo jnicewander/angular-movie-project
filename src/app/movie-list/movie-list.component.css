@@ -4,6 +4,7 @@ div
     flex-flow: column nowrap;
     justify-content: flex-start;
     align-items: center;
+    box-sizing: border-box;
 }
 
 .mov
@@ -12,7 +13,7 @@ div
     flex-flow: column nowrap;
     align-items: center;
 
-    width: 450px;
+    width: 100%;
     padding: 0 50px;
     margin-top: 75px;
     border-bottom: 2px black solid;
@@ -24,6 +25,7 @@ h1
     margin-bottom: 30px;
 
     text-align: center;
+    max-width: 50%;
 }
 
 .butts
@@ -34,6 +36,7 @@ h1
     justify-content: space-around;
 
     margin: 20px 0;
+    max-width: 60%;
 }
 
 button
@@ -46,6 +49,7 @@ button
     border-top: 1px black solid;
     padding-top: 15px;
     margin-bottom: 15px;
+    max-width: 60%;
 }
 
 p
