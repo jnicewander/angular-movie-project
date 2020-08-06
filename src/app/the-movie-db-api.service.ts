@@ -10,25 +10,26 @@ export class TheMovieDbApiService {
 
   constructor(private http: HttpClient) { }
   baseURL: string = 'https://api.themoviedb.org/3/discover/movie?api_key=a54ab344ecaa235e031650493214996a';
-  initialParameters: string = '&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&vote_count.gte=100';
+  defaultParams: string = '&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&vote_count.gte=100';
 
-  getMovies(searchcriteria?: SearchCriteriaInterface) {
+  getMovies(searchCriteria?: SearchCriteriaInterface) {
     // api call to populate movies
-    let url: string = `${this.baseURL}`
-    if(searchcriteria && searchcriteria.year) {
-      url = `${url}${this.initialParameters}&primary_release_year=${searchcriteria.year}`;
+    let url: string = `${this.baseURL}${this.defaultParams}`
+    if(searchCriteria && searchCriteria.year) {
+      url += `&primary_release_year=${searchCriteria.year}`;
     } 
-    if(searchcriteria && searchcriteria.genre) {
-      url = `${url}${this.initialParameters}&with_genres=${searchcriteria.genre}`;
+    if(searchCriteria && searchCriteria.genre) {
+      url += `&with_genres=${searchCriteria.genre}`;      
     }
 
-    if(searchcriteria && searchcriteria.rating) {
-        url = `${url}${this.initialParameters}&vote_average.gte=${searchcriteria.rating}`; 
+    if(searchCriteria && searchCriteria.rating) {
+        url += `&vote_average.gte=${searchCriteria.rating}`;       
     }
-    if(!searchcriteria){
-        url = `${url}${this.initialParameters}`;
+    if(!searchCriteria){
+        url = `${url}`;        
     }
 
+    console.log(url);
     return this.http.get(url);
   } 
 
